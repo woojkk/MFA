@@ -1,12 +1,15 @@
 package com.woojkk.mfa.data.dto;
 
+import java.io.Serializable;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
 @Getter
 @ToString
-public class MfaInitDto {
+@EqualsAndHashCode(callSuper = false)
+public class MfaInitDto implements Serializable {
   private String username;
   private String secretKey;
   private String type;

@@ -1,8 +1,10 @@
 package com.woojkk.mfa.data.dto;
 
 import com.woojkk.mfa.data.entity.MfaEntity;
+import java.io.Serializable;
 import java.util.Optional;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -10,7 +12,8 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @ToString
-public class MfaDto {
+@EqualsAndHashCode(callSuper = false)
+public class MfaDto implements Serializable {
   private long id;
   private String username;
   private String secretKey;
